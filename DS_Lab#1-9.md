@@ -3,7 +3,7 @@
 ## =>Prepared by Shaheer Ali
 ---
 ---
-# **:    ________  :TABLE OF CONTENTS: _______    :**
+# **TABLE OF CONTENTS:**
 
 [Lab #1: (Programming Principles)](#lab-no-1)\
 Basic Input & Output, Loops, Arrays.Structure, Functions, Pointers.\
