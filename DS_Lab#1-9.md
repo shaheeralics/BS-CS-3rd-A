@@ -182,7 +182,7 @@ Certainly! Here's a more specific lab outline for C++:
      ```
 #### **Output:**
 
-     ![image](https://github.com/shaheeralics/BS-CS-3rd-A/assets/150110556/21639c53-2760-48c2-92d7-0a601dd8f19b)
+   ![image](https://github.com/shaheeralics/BS-CS-3rd-A/assets/150110556/21639c53-2760-48c2-92d7-0a601dd8f19b)
 
 ---
 
