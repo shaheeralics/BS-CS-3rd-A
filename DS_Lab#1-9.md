@@ -180,6 +180,11 @@ Certainly! Here's a more specific lab outline for C++:
          return 0;
      }
      ```
+#### **Output:**
+
+     ![image](https://github.com/shaheeralics/BS-CS-3rd-A/assets/150110556/21639c53-2760-48c2-92d7-0a601dd8f19b)
+
+---
 
 Feel free to modify and expand on these examples based on the specific requirements and goals of your lab. Students can work on these exercises to gain hands-on experience with basic input and output, loops, arrays, structures, functions, and pointers in C++.
 
