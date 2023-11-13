@@ -456,14 +456,34 @@ It traverses the linked list and prints the elements.
 #### 2.4 Deleting a Node:
 
 ```cpp
-int item;
-cout << "\nEnter element to delete: ";
-cin >> item;
-q = start;
-node *p = start;
-while (q != NULL) {
-    // Code to find and delete the specified element
-}
+	int f=0;
+	int item;
+	cout<<"\n enter element to Delete";
+	cin>>item;
+	q=start;
+	node *p=start;
+	//find item to be deleted
+	while(q!=NULL)
+	{
+		if(item!=q->info)
+		{
+			p=q;
+			q=q->next;
+		}
+		else
+		//block the deleted item
+		{
+			p->next=q->next;
+			q->next=NULL;
+			delete q;//sir na free(q); karwaya tha
+			f=1;
+			//exit(0);
+			//cout<<"\n Hello";
+				cout<<"**Item Successfully Deleted **";
+			break;
+		}
+		
+	}
 ```
 
 This code segment takes user input for the element to be deleted and then searches for and deletes the node containing that element.
