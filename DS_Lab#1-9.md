@@ -2,7 +2,7 @@
 
 ## =>Prepared by Shaheer Ali
 ---
----
+             ---
 # **TABLE OF CONTENTS:**
 
 [Lab #1: (Programming Principles)](#lab-no-1)\
@@ -413,7 +413,7 @@ Here, `info` represents the data stored in the node, and `next` is a pointer to 
 node *start, *q;
 int x;
 start = NULL;
-start = new node;   // Allocate memory for the first node
+start = new node;   // Allocate memory for the first node//can also use //start=(node *)malloc(sizeof(node));
 q = start;
 ```
 
@@ -426,12 +426,17 @@ q = start;
 ```cpp
 cout << "Enter element to link list. Enter 0 to end: ";
 cin >> x;
-while (x != 0) {
-    q->info = x;
-    q->next = new node;   // Allocate memory for the next node
-    q = q->next;          // Move the pointer to the newly created node
-    cin >> x;
-}
+while(x!=0)
+	{
+		q->info=x;
+		q->next=NULL;
+		cin>>x;
+		if(x!=0)
+		{
+			q->next=new node;	//(node *)malloc(sizeof(node));
+			q=q->next;
+		}
+   }
 ```
 
 This code segment takes user input to add elements to the linked list until the user enters `0`.
