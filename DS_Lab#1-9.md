@@ -388,110 +388,127 @@ These examples provide a detailed explanation and demonstration of C++ classes, 
 
 # **Lab No 3:**
 
-Certainly! Let's delve into the details of list processing and pointers to structures in C++. We'll discuss what a linked list is, how it is implemented, and how pointers to structures are used in this context.
+Certainly! Let's break down the key concepts related to linked lists, list processing, and pointers to structure in C++.
 
-### Linked List:
+### 1. Linked List:
 
-A linked list is a data structure that consists of a sequence of elements where each element points to the next element in the sequence. Unlike arrays, linked lists do not have a fixed size, and elements can be easily inserted or removed.
+A linked list is a linear data structure in which elements are stored in nodes, and each node points to the next node in the sequence. The last node typically points to `NULL`, indicating the end of the list. Each node consists of two fields: a data field to store the element, and a pointer field to store the reference to the next node.
 
-#### Node Structure:
-
-In C++, a linked list is typically implemented using a structure (or a class) to represent each node in the list. Each node contains two parts:
-1. Data: The actual data or value stored in the node.
-2. Next: A pointer to the next node in the sequence.
-
-Let's define a simple structure for a linked list node:
+#### 1.1 Node Structure:
 
 ```cpp
-#include <iostream>
-
-// Node structure
-struct Node {
-    int data;
-    Node* next;
+struct node {
+    int info;       // Data field
+    node *next;     // Pointer to the next node
 };
 ```
 
-### List Processing with Pointers to Structures:
+Here, `info` represents the data stored in the node, and `next` is a pointer to the next node in the sequence.
 
-#### Creating Nodes:
+### 2. List Processing:
 
-To create nodes dynamically in C++, we use the `new` keyword to allocate memory for a node and return a pointer to it.
+#### 2.1 Node Creation:
 
 ```cpp
-// Creating nodes dynamically
-Node* createNode(int value) {
-    Node* newNode = new Node;
-    newNode->data = value;
-    newNode->next = nullptr; // Initialize the next pointer to null
-    return newNode;
+node *start, *q;
+int x;
+start = NULL;
+start = new node;   // Allocate memory for the first node
+q = start;
+```
+
+- `start`: Head of the linked list.
+- `q`: Pointer used for traversing and creating nodes.
+- `new node`: Dynamically allocates memory for a new node.
+
+#### 2.2 Adding Elements to the Linked List:
+
+```cpp
+cout << "Enter element to link list. Enter 0 to end: ";
+cin >> x;
+while (x != 0) {
+    q->info = x;
+    q->next = new node;   // Allocate memory for the next node
+    q = q->next;          // Move the pointer to the newly created node
+    cin >> x;
 }
 ```
 
-#### Building a Linked List:
+This code segment takes user input to add elements to the linked list until the user enters `0`.
 
-We can create a linked list by linking nodes together. The last node's `next` pointer is set to `nullptr` to indicate the end of the list.
+#### 2.3 Displaying Linked List:
 
 ```cpp
-// Building a linked list
-Node* addToFront(Node* head, int value) {
-    Node* newNode = createNode(value);
-    newNode->next = head;
-    return newNode;
-}
-
-// Displaying the linked list
-void displayList(Node* head) {
-    Node* current = head;
-    while (current != nullptr) {
-        cout << current->data << " ";
-        current = current->next;
-    }
-    cout << std::endl;
+q = start;
+while (q != NULL) {
+    cout << endl << q->info;
+    q = q->next;
 }
 ```
 
-#### Deleting Nodes:
+It traverses the linked list and prints the elements.
 
-Deleting nodes involves deallocating the memory used by the node and updating the pointers of adjacent nodes.
+#### 2.4 Deleting a Node:
 
 ```cpp
-// Deleting a linked list
-void deleteList(Node*& head) {
-    while (head != nullptr) {
-        Node* temp = head;
-        head = head->next;
-        delete temp;
-    }
+int item;
+cout << "\nEnter element to delete: ";
+cin >> item;
+q = start;
+node *p = start;
+while (q != NULL) {
+    // Code to find and delete the specified element
 }
 ```
 
-### Example Usage:
+This code segment takes user input for the element to be deleted and then searches for and deletes the node containing that element.
+
+#### 2.5 Displaying Modified Linked List:
 
 ```cpp
-int main() {
-    // Creating an empty linked list
-    Node* myList = nullptr;
-
-    // Adding elements to the front of the list
-    myList = addToFront(myList, 3);
-    myList = addToFront(myList, 7);
-    myList = addToFront(myList, 1);
-
-    // Displaying the linked list
-    displayList(myList);
-
-    // Deleting the linked list to free memory
-    deleteList(myList);
-
-    return 0;
+if (f == 1) {
+    // Code to display the modified linked list after deletion
+} else {
+    cout << "**Number Not Found**";
 }
 ```
 
-In this example, we've created a simple linked list, added elements to the front, displayed the list, and then deleted the list to free the allocated memory.
+If the deletion was successful, it displays the modified linked list. If the element was not found, it prints a message.
 
-This covers the basics of linked lists and how pointers to structures are used in C++ for list processing. Feel free to ask if you have more specific questions or if you'd like additional details on any aspect!
+### 3. Pointers to Structure:
 
+#### 3.1 Declaration:
+
+```cpp
+node *start, *q;
+```
+
+Declares pointers to nodes. `start` is typically used as the head of the linked list, and `q` is used for traversal and dynamic memory allocation.
+
+#### 3.2 Dynamic Memory Allocation:
+
+```cpp
+start = new node;
+```
+
+Allocates memory for a new node using the `new` keyword. In modern C++, it's preferable to use `new` instead of `malloc` for dynamic memory allocation.
+
+#### 3.3 Deletion:
+
+```cpp
+delete q;
+```
+
+Frees the memory occupied by a node using the `delete` keyword. This should be done when a node is no longer needed.
+
+### Summary:
+
+- **Linked List**: A data structure where elements are stored in nodes, and each node points to the next node.
+- **Node Structure**: Defines the structure of a node containing data and a pointer to the next node.
+- **List Processing**: Involves node creation, adding elements, displaying the list, deleting nodes, and displaying the modified list.
+- **Pointers to Structure**: Pointers are used to manipulate and traverse the linked list, and dynamic memory allocation is done using `new`.
+
+Keep in mind that the use of `malloc` and `free` is discouraged in modern C++ in favor of `new` and `delete`. Additionally, consider using functions for modularization and better code organization.
 
 # **Lab No 4:**
 
