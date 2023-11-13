@@ -491,11 +491,21 @@ This code segment takes user input for the element to be deleted and then search
 #### 2.5 Displaying Modified Linked List:
 
 ```cpp
-if (f == 1) {
-    // Code to display the modified linked list after deletion
-} else {
-    cout << "**Number Not Found**";
-}
+if(f==1)
+	{
+	q=start;
+	//for displaying and checking while item is deleted
+	while(q!=NULL)
+	{	
+		cout<<endl<<q->info;
+		q=q->next;
+		
+	}
+	}
+	else
+	{
+		cout<<"**Number Not Found**";
+	}
 ```
 
 If the deletion was successful, it displays the modified linked list. If the element was not found, it prints a message.
