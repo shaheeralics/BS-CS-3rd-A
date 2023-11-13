@@ -512,142 +512,122 @@ Keep in mind that the use of `malloc` and `free` is discouraged in modern C++ in
 
 # **Lab No 4:**
 
-Certainly! Let's delve into the details of list processing and pointers to structures for a doubly linked list in C++. A doubly linked list is a type of linked list in which each node contains a data element and two pointers, one pointing to the next node and another pointing to the previous node.
+Certainly! Let's delve into the concepts of a doubly linked list, list processing, and pointers to structures in C++. A doubly linked list is a type of linked list where each node contains a data element and two pointers: one pointing to the next node and another pointing to the previous node.
 
-### Doubly Linked List:
+### 1. Doubly Linked List:
 
-In a doubly linked list, each node has the following structure:
+#### 1.1 Node Structure:
 
 ```cpp
-#include <iostream>
-
-// Node structure for doubly linked list
 struct Node {
-    int data;
-    Node* next;
-    Node* prev;
+    int data;          // Data field
+    Node* next;        // Pointer to the next node
+    Node* prev;        // Pointer to the previous node
 };
 ```
 
-- `data`: Holds the actual data or value stored in the node.
-- `next`: Points to the next node in the sequence.
-- `prev`: Points to the previous node in the sequence.
+Here, `data` represents the data stored in the node, `next` is a pointer to the next node, and `prev` is a pointer to the previous node.
 
-### List Processing with Pointers to Structures:
+### 2. List Processing:
 
-#### Creating Nodes:
-
-Creating nodes dynamically involves allocating memory for a node and initializing its `data`, `next`, and `prev` fields.
+#### 2.1 Node Creation:
 
 ```cpp
-// Creating nodes dynamically
-Node* createNode(int value) {
-    Node* newNode = new Node;
-    newNode->data = value;
-    newNode->next = nullptr; // Initialize the next pointer to null
-    newNode->prev = nullptr; // Initialize the prev pointer to null
-    return newNode;
+Node* head = nullptr;  // Head of the doubly linked list
+Node* tail = nullptr;  // Tail of the doubly linked list
+
+Node* newNode = new Node;  // Allocate memory for a new node
+newNode->next = nullptr;
+newNode->prev = nullptr;
+```
+
+- `head`: Points to the first node in the doubly linked list.
+- `tail`: Points to the last node in the doubly linked list.
+- `new Node`: Dynamically allocates memory for a new node.
+
+#### 2.2 Adding Elements to the Doubly Linked List:
+
+```cpp
+int x;
+cout << "Enter element to add to the doubly linked list. Enter 0 to end: ";
+cin >> x;
+while (x != 0) {
+    // Code to add elements to the doubly linked list
 }
 ```
 
-#### Building a Doubly Linked List:
+This code segment takes user input to add elements to the doubly linked list until the user enters `0`.
 
-Building a doubly linked list involves linking nodes together in both forward and backward directions. The last node's `next` pointer is set to `nullptr` to indicate the end of the list.
+#### 2.3 Displaying Doubly Linked List:
 
 ```cpp
-// Adding a node to the front of the list
-Node* addToFront(Node* head, int value) {
-    Node* newNode = createNode(value);
-    newNode->next = head;
-    if (head != nullptr) {
-        head->prev = newNode; // Update the previous pointer of the existing head
-    }
-    return newNode;
-}
-
-// Displaying the doubly linked list forward
-void displayListForward(Node* head) {
-    Node* current = head;
-    while (current != nullptr) {
-        cout << current->data << " ";
-        current = current->next;
-    }
-    cout << std::endl;
-}
-
-// Displaying the doubly linked list backward
-void displayListBackward(Node* tail) {
-    Node* current = tail;
-    while (current != nullptr) {
-        cout << current->data << " ";
-        current = current->prev;
-    }
-    cout << std::endl;
+Node* current = head;
+while (current != nullptr) {
+    cout << current->data << " ";
+    current = current->next;
 }
 ```
 
-#### Deleting Nodes:
+Traverses the doubly linked list and prints the elements.
 
-Deleting nodes in a doubly linked list involves updating the pointers of adjacent nodes and deallocating memory.
+#### 2.4 Deleting a Node:
 
 ```cpp
-// Deleting a node from the doubly linked list
-void deleteNode(Node*& head, Node*& tail, Node* nodeToDelete) {
-    if (nodeToDelete == nullptr) {
-        return; // Invalid node to delete
-    }
+int item;
+cout << "\nEnter element to delete: ";
+cin >> item;
+Node* current = head;
 
-    if (nodeToDelete->prev != nullptr) {
-        nodeToDelete->prev->next = nodeToDelete->next;
-    } else {
-        head = nodeToDelete->next; // Update head if the node to delete is the first node
-    }
-
-    if (nodeToDelete->next != nullptr) {
-        nodeToDelete->next->prev = nodeToDelete->prev;
-    } else {
-        tail = nodeToDelete->prev; // Update tail if the node to delete is the last node
-    }
-
-    delete nodeToDelete; // Deallocate memory
+while (current != nullptr) {
+    // Code to find and delete the specified element
 }
 ```
 
-### Example Usage:
+This code segment takes user input for the element to be deleted and then searches for and deletes the node containing that element.
+
+#### 2.5 Displaying Modified Doubly Linked List:
 
 ```cpp
-int main() {
-    // Creating an empty doubly linked list
-    Node* myListHead = nullptr;
-    Node* myListTail = nullptr;
-
-    // Adding elements to the front of the list
-    myListHead = addToFront(myListHead, 3);
-    myListHead = addToFront(myListHead, 7);
-    myListHead = addToFront(myListHead, 1);
-
-    // Displaying the doubly linked list forward
-    displayListForward(myListHead);
-
-    // Displaying the doubly linked list backward
-    displayListBackward(myListTail);
-
-    // Deleting a node from the list
-    Node* nodeToDelete = myListHead->next;
-    deleteNode(myListHead, myListTail, nodeToDelete);
-
-    // Displaying the doubly linked list forward after deletion
-    displayListForward(myListHead);
-
-    // Displaying the doubly linked list backward after deletion
-    displayListBackward(myListTail);
-
-    return 0;
-}
+// Code to display the modified doubly linked list after deletion
 ```
 
-This example covers the basics of list processing with pointers to structures for a doubly linked list in C++. Feel free to ask if you have more specific questions or if you'd like additional details on any aspect!
+If the deletion was successful, display the modified doubly linked list.
 
+### 3. Pointers to Structure:
+
+#### 3.1 Declaration:
+
+```cpp
+Node* head = nullptr;
+Node* tail = nullptr;
+```
+
+Declares pointers to nodes. `head` typically points to the first node, and `tail` points to the last node in the doubly linked list.
+
+#### 3.2 Dynamic Memory Allocation:
+
+```cpp
+Node* newNode = new Node;
+```
+
+Allocates memory for a new node using the `new` keyword.
+
+#### 3.3 Deletion:
+
+```cpp
+delete currentNode;
+```
+
+Frees the memory occupied by a node using the `delete` keyword. This should be done when a node is no longer needed.
+
+### Summary:
+
+- **Doubly Linked List**: A linked list where each node has pointers to both the next and previous nodes.
+- **Node Structure**: Defines the structure of a node containing data, a pointer to the next node, and a pointer to the previous node.
+- **List Processing**: Involves node creation, adding elements, displaying the list, deleting nodes, and displaying the modified list.
+- **Pointers to Structure**: Pointers are used to manipulate and traverse the doubly linked list, and dynamic memory allocation is done using `new`.
+
+Remember to free memory using `delete` when nodes are no longer needed, and consider using functions for code modularity and better organization.
 ---
 
 # **Lab No 5:**
