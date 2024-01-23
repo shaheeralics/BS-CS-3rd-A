@@ -1,3 +1,7 @@
+![image](https://github.com/shaheeralics/BS-CS-3rd-A/assets/150110556/29d64dbe-d188-49e5-a6b6-375e6b0c6ecf)
+
+
+
 **Question 2: Effective Business Communication in the Light of 7 Cs**
 
 Effective business communication is crucial for the success of any organization. The 7 Cs provide a useful framework to ensure clear and impactful communication:
