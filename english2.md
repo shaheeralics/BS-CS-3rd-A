@@ -31,6 +31,10 @@ To kick off the course, students might engage in a "Two Truths and a Lie" activi
 
 By the end of the first week, students should have a solid understanding of the course objectives, expectations, and the crucial role that effective communication plays in various aspects of life. This foundational knowledge sets the stage for deeper exploration of communication concepts in the following weeks.
 
+
+---
+
+
 **Week 2: Communication Overview**
 
 *Understanding the Foundations of Communication:*
@@ -63,6 +67,10 @@ In the Shannon-Weaver model, communication is depicted as a linear process invol
 Interpersonal communication occurs between individuals, fostering personal connections and relationships. Intrapersonal communication involves self-talk and internal dialogue. Small group communication, evident in team collaborations, requires effective coordination and shared understanding. Mass communication, through media channels, reaches a large audience but may lack immediate feedback.
 
 By the end of Week 2, students gain a comprehensive understanding of the foundational elements that constitute communication. This knowledge forms the basis for further exploration of communication barriers, behaviors, and strategies in the upcoming weeks.
+
+
+---
+
 
 **Week 3: Communication Barriers/Behaviors**
 
@@ -97,6 +105,10 @@ Transactional analysis helps individuals analyze and understand their communicat
 
 By the end of Week 3, students should be able to identify and analyze various communication barriers and behaviors. This knowledge serves as a foundation for developing strategies to enhance communication effectiveness, setting the stage for deeper explorations into verbal and nonverbal communication in the coming weeks.
 
+
+---
+
+
 **Week 4: Verbal/Nonverbal Communication/Paralanguage**
 
 *Mastering the Language of Communication:*
@@ -130,6 +142,10 @@ Public speakers use paralanguage to enhance their message. A speaker who modulat
 
 By the end of Week 4, students should have a comprehensive understanding of the intricacies of verbal and nonverbal communication, as well as the significant role paralanguage plays in conveying messages. This knowledge sets the stage for further exploration of listening strategies and barriers in Week 5.
 
+
+---
+
+
 **Week 5: Listening Strategies/Barriers**
 
 *The Art of Listening:*
@@ -162,6 +178,10 @@ Active listening is crucial in resolving conflicts. By carefully listening to ea
 In customer service, empathetic listening is essential for understanding and addressing customer concerns. Customer service representatives who demonstrate empathy by acknowledging emotions and showing understanding can enhance customer satisfaction. This highlights the role of empathetic listening in building positive relationships.
 
 By the end of Week 5, students should have a solid grasp of various listening strategies and an awareness of common barriers that can impede effective communication. This knowledge serves as a foundation for the exploration of the "Seven C's of Communication" in Week 6.
+
+
+---
+
 
 **Week 6: Seven C's of Communication**
 
@@ -208,6 +228,10 @@ Courtesy plays a crucial role in email communication. Using polite language, ack
 
 By the end of Week 6, students should have a deep understanding of the Seven C's of Communication and be equipped with the skills to apply these principles to enhance the clarity and effectiveness of their messages. This knowledge prepares them for the upcoming examination and further exploration of specific communication challenges in the following weeks.
 
+
+---
+
+
 **Week 7: Comma Splice/Run-ons/Fragments/Parallelism/Pronoun Reference**
 
 *Mastering Grammar and Syntax:*
@@ -247,6 +271,10 @@ Revised: *The manager discussed the project with the team, and the team decided 
 
 By the end of Week 7, students should have a strong grasp of these grammatical concepts, allowing them to enhance the correctness and clarity of their written communication. The topics covered in this week set the stage for the upcoming midterm examination in Week 8, where students can apply their understanding of communication principles, strategies, and grammar.
 
+
+---
+
+
 **Week 8: Midterm Exam**
 
 *Assessing Understanding and Application:*
@@ -283,6 +311,10 @@ Week 8 marks the midpoint of the communication course, and students are schedule
 
 By the end of Week 8, students have the opportunity to demonstrate their understanding and application of the course material. The results of the midterm exam will guide their focus for the remaining weeks of the course, ensuring continued growth and mastery of communication skills.
 
+
+---
+
+
 **Week 9: Telephone Skills/Business Meetings**
 
 *Effective Communication in Professional Settings:*
@@ -316,6 +348,8 @@ Active participation in business meetings involves contributing relevant insight
 
 By the end of Week 9, students should be well-versed in the nuances of telephone communication and business meetings, key skills for navigating professional environments. This knowledge prepares them for the upcoming focus on written communication skills in Week 10, where note-taking, minute-taking, proofreading, and editing will be explored.
 
+---
+
 **Week 10: Note-Taking/Minute-Taking/Proofreading and Editing**
 
 *Polishing Written Communication:*
@@ -348,6 +382,9 @@ When taking notes during a lecture or meeting, use a combination of keywords and
 When preparing meeting minutes, focus on recording key decisions, action items, and discussions. Use a consistent format and language, and be mindful of the tone and level of detail. The goal is to create a document that accurately reflects the meeting's content without unnecessary complexity.
 
 By the end of Week 10, students should have honed their written communication skills, from effective note-taking to producing polished and error-free written documents. These skills are foundational for success in email writing, which is the focus of Week 11 in the communication course.
+
+---
+
 
 **Week 11: Email Writing**
 
