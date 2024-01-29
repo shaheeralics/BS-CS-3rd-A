@@ -2,6 +2,8 @@
 
 ![image](https://github.com/shaheeralics/BS-CS-3rd-A/assets/150110556/acca5e42-00e9-4187-b1d1-06ed80c10f85)
 
+---
+
 ## **Question 1**:
 
 (a) **Assembly Language:**
@@ -46,6 +48,8 @@
 
 (j) **mak32.bat File/Batch File:**
    A `mak32.bat` file is likely a batch file with a name suggesting that it is related to a make/build process for a 32-bit system. Batch files are script files used in Windows environments to automate tasks. A `mak32.bat` file might contain commands to compile and build a 32-bit software project. The specific contents and purpose would depend on the context and the project it is associated with.
+
+   ---
 
 ## **Question 2**:
 
@@ -135,6 +139,8 @@
 
 In practice, the distinction between RISC and CISC has blurred over time as architectures have evolved, and modern processors may exhibit features from both. The choice between RISC and CISC often depends on specific design goals and application requirements.
 
+---
+
 ## **Question 3:**
 
 In basic computer design, the Data bus, Control bus, and Address bus are essential components that facilitate communication and data transfer between different parts of the computer. Let's explore the functions of each:
@@ -183,6 +189,8 @@ In basic computer design, the Data bus, Control bus, and Address bus are essenti
 - The Address bus specifies the memory location or peripheral device involved in the data transfer.
 
 These buses work together to enable the flow of information within a computer system, allowing the CPU to communicate with memory, input/output devices, and other components.
+
+---
 
 ## **Question 4:**
 
@@ -258,6 +266,8 @@ end main
 ```
 
 Note: Replace the placeholder values and adjust the code as needed for your specific requirements. The provided assembly code prints the string, performs the equivalent of `bytel = value;` and `sum += w + x + y + z;`, and prints the result. The `ConvertAndPrint` subroutine is used to convert a word (sum in this case) to ASCII and print it.
+
+---
 
 ## **Question 5:**
 
