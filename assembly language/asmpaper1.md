@@ -134,3 +134,193 @@
   - Suited for tasks where the complexity of instructions can provide efficiency.
 
 In practice, the distinction between RISC and CISC has blurred over time as architectures have evolved, and modern processors may exhibit features from both. The choice between RISC and CISC often depends on specific design goals and application requirements.
+
+## **Question 3:**
+
+In basic computer design, the Data bus, Control bus, and Address bus are essential components that facilitate communication and data transfer between different parts of the computer. Let's explore the functions of each:
+
+### 1. Data Bus:
+
+- **Function:**
+  - The Data bus is responsible for carrying data between the CPU, memory, and other peripherals.
+  - It allows the transfer of binary data (0s and 1s) between different components of the computer system.
+
+- **Characteristics:**
+  - Bidirectional: The data bus is bidirectional, meaning it can transmit data in both directions.
+  - Width: The width of the data bus determines how many bits can be transferred simultaneously. For example, a 32-bit data bus can transfer 32 bits of data at once.
+
+- **Example:**
+  - If the CPU wants to read data from memory, the data bus carries the binary representation of that data from the memory module to the CPU.
+
+### 2. Control Bus:
+
+- **Function:**
+  - The Control bus is responsible for carrying control signals that coordinate and manage various activities within the computer.
+  - It includes signals that indicate the type of operation to be performed (read, write, etc.) and other control signals for synchronization.
+
+- **Characteristics:**
+  - Unidirectional: The control bus is typically unidirectional, transmitting signals from the CPU to other components.
+
+- **Example:**
+  - The control bus may include signals such as Read (RD), Write (WR), Memory Select (M/IO), etc. These signals inform the memory or other peripherals about the type of operation the CPU wants to perform.
+
+### 3. Address Bus:
+
+- **Function:**
+  - The Address bus is responsible for carrying memory addresses from the CPU to memory or I/O devices.
+  - It specifies the location in memory or a particular peripheral where data needs to be read from or written to.
+
+- **Characteristics:**
+  - Unidirectional: Similar to the control bus, the address bus is typically unidirectional, transmitting signals from the CPU to memory or peripherals.
+
+- **Example:**
+  - When the CPU needs to read data from a specific memory location, it places the memory address on the address bus. The memory module, guided by this address, responds by placing the corresponding data on the data bus for the CPU to read.
+
+### Summary:
+
+- The Data bus is responsible for the actual transfer of binary data.
+- The Control bus carries control signals that coordinate and manage various activities.
+- The Address bus specifies the memory location or peripheral device involved in the data transfer.
+
+These buses work together to enable the flow of information within a computer system, allowing the CPU to communicate with memory, input/output devices, and other components.
+
+## **Question 4:**
+
+To write equivalent instructions in assembly language for the provided C program instructions, we need to choose an assembly language that is compatible with the DOS environment since the program structure provided is for DOS. In this case, I'll use x86 assembly language with MASM syntax for DOS. Below is the equivalent assembly language code:
+
+```assembly
+.dosseg
+.model small
+.stack 100h
+.data
+    msg db 'C and Assembly language Comparison$'
+    bytel db ?
+    w dw ?
+    x dw ?
+    y dw ?
+    z dw ?
+    sum dw ?
+
+.code
+main proc
+    ; Load address of the string into DS:DX for printing
+    lea dx, msg
+    mov ah, 9
+    int 21h
+
+    ; Equivalent to: bytel = value;
+    mov bytel, 42 ; Replace 42 with the desired value
+
+    ; Equivalent to: sum += w + x + y + z;
+    mov ax, w
+    add ax, x
+    add ax, y
+    add ax, z
+    add sum, ax
+
+    ; Convert sum to ASCII and print
+    mov ax, sum
+    call ConvertAndPrint
+
+    ; Exit the program
+    mov ah, 4Ch
+    int 21h
+
+main endp
+
+; Subroutine to convert a word to ASCII and print
+ConvertAndPrint proc
+    mov cx, 10 ; Set the divisor for decimal conversion
+
+    ; Loop to convert and print each digit
+    digit_loop:
+        xor dx, dx ; Clear any previous remainder
+        div cx     ; Divide AX by 10, result in AX, remainder in DX
+
+        ; Convert remainder to ASCII and print
+        add dl, '0'
+        mov ah, 2
+        int 21h
+
+        ; Continue loop if quotient (AX) is not zero
+        test ax, ax
+        jnz digit_loop
+
+        ; Print a newline character
+        mov dl, 0Ah
+        mov ah, 2
+        int 21h
+
+    ret
+ConvertAndPrint endp
+
+end main
+```
+
+Note: Replace the placeholder values and adjust the code as needed for your specific requirements. The provided assembly code prints the string, performs the equivalent of `bytel = value;` and `sum += w + x + y + z;`, and prints the result. The `ConvertAndPrint` subroutine is used to convert a word (sum in this case) to ASCII and print it.
+
+## **Question 5:**
+
+Certainly! Below is an example of an x86 assembly language program using DOS interrupts to take two numbers from users and then compare and display a message based on whether the numbers are equal or not. This example assumes the user inputs integers.
+
+```assembly
+.dosseg
+.model small
+.stack 100h
+.data
+    msg1 db 'ENTER FIRST NUMBER:$'
+    msg2 db 'ENTER SECOND NUMBER:$'
+    equal_msg db 'NUMBERS ARE EQUAL$'
+    not_equal_msg db 'NUMBERS ARE NOT EQUAL$'
+
+    first_num db ?
+    second_num db ?
+
+.code
+main proc
+    ; Display "ENTER FIRST NUMBER..." message
+    lea dx, msg1
+    mov ah, 9
+    int 21h
+
+    ; Read the first number
+    mov ah, 1
+    int 21h
+    sub al, '0' ; Convert ASCII to integer
+    mov first_num, al
+
+    ; Display "ENTER SECOND NUMBER..." message
+    lea dx, msg2
+    mov ah, 9
+    int 21h
+
+    ; Read the second number
+    mov ah, 1
+    int 21h
+    sub al, '0' ; Convert ASCII to integer
+    mov second_num, al
+
+    ; Compare the numbers
+    cmp first_num, second_num
+    je equal_numbers
+
+    ; Display "NUMBERS ARE NOT EQUAL" message
+    lea dx, not_equal_msg
+    jmp print_message
+
+equal_numbers:
+    ; Display "NUMBERS ARE EQUAL" message
+    lea dx, equal_msg
+
+print_message:
+    mov ah, 9
+    int 21h
+
+    ; Exit the program
+    mov ah, 4Ch
+    int 21h
+
+main endp
+end main
+```
+
