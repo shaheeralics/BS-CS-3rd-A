@@ -2,7 +2,7 @@
 
 ---
 
-## **Questionn 1:**
+## **Question 1:**
 
 
 ### (a) **Conditional Jump vs. Unconditional Jump in Assembly Language:**
@@ -88,9 +88,6 @@ main endp
 end main
 ```
 
-This MASM assembly program compares `num1` and `num2` and displays the message "Equal Numbers"
-if they are equal. The program uses DOS interrupts for displaying messages and exiting the
-program. Customize the program based on your requirements.
 
 ---
 
@@ -136,7 +133,6 @@ Hardware Control Logic (HCL) refers to the digital circuitry responsible for con
 
 A basic hardware control logic can be represented using gates and flip-flops. Let's consider a simple example of a control circuit with two inputs (A and B) and an output (Y).
 
-![Gate Diagram of HCL](https://i.imgur.com/Ki0ld2p.png)
 
 Explanation:
 
@@ -217,10 +213,6 @@ CAPITAL endp
 
 end main
 ```
-
-This program defines two procedures, `SMALI` and `CAPITAL`, to print small and capital alphabets
-, respectively. The `main` procedure calls these procedures, and newline characters are used for better readability. Customize the program as needed.
-
 
 ---
 
