@@ -91,38 +91,6 @@ end main
 
 ---
 
-## **Questionn 3:**
-
-**Hardware Control Logic (HCL):**
-Hardware Control Logic (HCL) refers to the digital circuitry responsible for controlling various hardware components within a computer or electronic system. It plays a crucial role in coordinating the operation of different modules, managing data flow, and ensuring proper synchronization. HCL is implemented using digital logic circuits, such as gates, flip-flops, and other combinational and sequential logic elements.
-
-**Gate Diagram of a Hardware Control Logic:**
-
-A basic hardware control logic can be represented using gates and flip-flops. Let's consider a simple example of a control circuit with two inputs (A and B) and an output (Y).
-
-![Gate Diagram of HCL](https://i.imgur.com/Ki0ld2p.png)
-
-Explanation:
-
-1. **Inputs (A and B):** These represent signals or conditions that the control logic processes.
-2. **AND Gate (G1):** The AND gate takes input signals A and B. The output is high (1) only when both A and B are high.
-3. **NOT Gate (G2):** The NOT gate inverts the output of AND gate G1. It produces a high output (1) when G1's output is low, and vice versa.
-4. **OR Gate (G3):** The OR gate combines the original inputs A and B with the inverted output of G2. The output is high if either A and B are high or G2 is low.
-5. **Flip-Flop (FF1):** A flip-flop is used to store a binary state. It can be set (1) or reset (0) based on specific conditions. In this case, it is triggered by the output of OR gate G3.
-6. **Output (Y):** The final output is taken from the Q output of the flip-flop.
-
-**Operation Explanation:**
-
-- If both A and B are high, G1 output is high, G2 output is low (inverted), and G3 output is high. This high signal sets FF1, and Y becomes high.
-- If either A or B (or both) is low, G1 output is low, G2 output is high, and G3 output is high. This keeps FF1 in a reset state, and Y remains low.
-
-This is a simplified representation, and real-world control logic can be significantly more complex, involving multiple inputs, conditions,
-and sequential logic elements to manage the system's operation effectively.
-
-
----
-
-
 
 ## **Questionn 3:**
 
